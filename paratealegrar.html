@@ -68,17 +68,24 @@
 			const agora = new Date();
 			const horaAtual = agora.getHours();
 			const minutosAtuais = agora.getMinutes();
-					if (horaAtual === 0 && minutosAtuais === 0) {
-			const mensagens = [				"Você é o amor da minha vida",				"Com você eu me sinto completo(a)",				"Você é a razão do meu sorriso",				"Eu te amo mais a cada dia que passa",				"Você é minha pessoa favorita no mundo"			];
-			const indiceAleatorio = Math.floor(Math.random() * mensagens.length);
-			const mensagem = mensagens[indiceAleatorio];
-			document.getElementById("mensagem").textContent = mensagem;
-		}
-	}
 
-	atualizarMensagem();
-	setInterval(atualizarMensagem, 1000 * 60); // atualiza a cada minuto
-</script>
+			if (horaAtual === 0 && minutosAtuais === 0) {
+				const mensagens = [
+					"Você é o amor da minha vida",
+					"Com você eu me sinto completo(a)",
+					"Você é a razão do meu sorriso",
+					"Eu te amo mais a cada dia que passa",
+					"Você é minha pessoa favorita no mundo"
+				];
+				const indiceAleatorio = Math.floor(Math.random() * mensagens.length);
+				const mensagem = mensagens[indiceAleatorio];
+				document.getElementById("mensagem").textContent = mensagem;
+			}
+		}
+
+		atualizarMensagem();
+		setInterval(atualizarMensagem, 1000 * 60); // atualiza a cada minuto
+	</script>
 </head>
 <body>
 	<nav>
@@ -89,12 +96,13 @@
 	</nav>
 	<header>
 		<h1>Para alegrar seu dia</h1>
- 
-
 	</header>
 	<main>
-    <h1>Para alegrar seu dia</h1>
-    <p id="mensagem">Carregando mensagem...</p>
-</main>
+		<h1>Para alegrar seu dia</h1>
+		<p id="mensagem">Carregando mensagem...</p>
+	</main>
+	<footer>
+		<p>Feito com amor para a minha princesa.</p>
+	</footer>
 </body>
 </html>
