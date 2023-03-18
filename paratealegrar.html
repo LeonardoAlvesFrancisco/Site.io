@@ -63,6 +63,22 @@
 			color: #FFC0CB;
 		}
 	</style>
+	<script>
+		function atualizarMensagem() {
+			const agora = new Date();
+			const horaAtual = agora.getHours();
+			const minutosAtuais = agora.getMinutes();
+					if (horaAtual === 0 && minutosAtuais === 0) {
+			const mensagens = [				"Você é o amor da minha vida",				"Com você eu me sinto completo(a)",				"Você é a razão do meu sorriso",				"Eu te amo mais a cada dia que passa",				"Você é minha pessoa favorita no mundo"			];
+			const indiceAleatorio = Math.floor(Math.random() * mensagens.length);
+			const mensagem = mensagens[indiceAleatorio];
+			document.getElementById("mensagem").textContent = mensagem;
+		}
+	}
+
+	atualizarMensagem();
+	setInterval(atualizarMensagem, 1000 * 60); // atualiza a cada minuto
+</script>
 </head>
 <body>
 	<nav>
@@ -73,66 +89,7 @@
 	</nav>
 	<header>
 		<h1>Para alegrar seu dia</h1>
-    <script>
-    function atualizarMensagem() {
-        // obter a data atual do sistema
-        var dataAtual = new Date();
-
-        // obter o dia do ano (1 a 365)
-        var diaDoAno = Math.ceil((dataAtual - new Date(dataAtual.getFullYear(), 0, 1)) / 86400000);
-
-        // obter a mensagem correspondente ao dia do ano
-	var mensagens = [
-	    "Que o seu dia seja abençoado e cheio de alegria!",
-	    "Que cada momento do seu dia seja especial como você!",
-	    "Que você tenha um dia maravilhoso, cheio de boas energias!",
-	    "Bom dia, meu amor! Que hoje tudo dê certo e você sinta todo o meu amor!",
-	    "Que o seu dia comece bem e termine ainda melhor!",
-	    "Que hoje você realize todos os seus sonhos e seja muito feliz!",
-	    "Bom dia! Que o dia de hoje seja melhor do que todos os dias que já passaram!",
-	    "Que o seu dia seja cheio de sorrisos e alegrias!",
-	    "Que hoje você encontre motivos para sorrir e ser feliz!",
-	    "Que você tenha um dia produtivo e abençoado!",
-	    "Bom dia, meu amor! Que o seu dia seja tão lindo quanto o seu sorriso!",
-	    "Que o dia de hoje traga muitas coisas boas para a sua vida!",
-	    "Que você tenha um dia abençoado e repleto de felicidade!",
-	    "Que o seu dia comece com o pé direito e termine com o coração cheio de amor!",
-	    "Bom dia, meu amor! Que a sua vida seja sempre repleta de amor e felicidade!",
-	    "Que o dia de hoje seja mais doce do que todos os outros dias!",
-	    "Que hoje você encontre paz, amor e felicidade!",
-	    "Que você tenha um dia incrível e inesquecível!",
-	    "Bom dia! Que o seu dia seja cheio de coisas boas e sorrisos!",
-	    "Que o seu dia seja especial como você é para mim!",
-	    "Que você tenha um dia abençoado e repleto de amor!",
-	    "Que hoje você sinta todo o meu amor e carinho!",
-	    "Bom dia, meu amor! Que hoje você realize todos os seus sonhos!",
-	    "Que o dia de hoje seja tão especial quanto você é para mim!",
-	    "Que você tenha um dia repleto de alegrias e felicidades!",
-	    "Que o seu dia seja tão incrível quanto o seu coração!",
-	    "Bom dia! Que o seu dia seja cheio de amor, paz e alegria!",
-	    "Que hoje você receba muitas bênçãos e muitas coisas boas!",
-	    "Que o seu dia seja tão especial quanto a nossa história de amor!",
-	    "Que você tenha um dia maravilhoso e cheio de surpresas!",
-	    "Bom dia, meu amor! Que hoje você se sinta ainda mais amado e feliz!",
-	    "Que o dia de hoje seja o começo de muitas coisas boas em sua vida!",
-	    "Que você tenha um dia de muitas realizações e felicidades!",
-	    "Que o seu dia seja tão especial quanto você é para mim!",
-	    "Bom dia! Que o dia de hoje seja repleto de sorrisos e amor!",
-	    "Que você tenha um dia abençoado e cheio de paz!",
-	    "Que o seu dia seja iluminado por muita luz e amor!",
-	    "Que hoje você encontre muitas razões para sorrir e ser feliz!"];
-        var mensagemAtual = mensagens[diaDoAno - 1];
-
-        // atualizar o texto da mensagem na página
-        document.getElementById("mensagem").textContent = mensagemAtual;
-    }
-
-    // chamar a função de atualização da mensagem no carregamento da página
-    window.onload = atualizarMensagem;
-
-    // atualizar a mensagem a cada nova data
-    setInterval(atualizarMensagem, 86400000); // 24 horas em milissegundos
-</script>
+ 
 
 	</header>
 	<main>
