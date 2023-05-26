@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bebezi</title>
+	<style>
+		body {
+			background-color: #FFE5E5;
+			color: #333333;
+			font-family: Arial, sans-serif;
+		}
+		header {
+			background-color: #FFC0CB;
+			padding: 20px;
+			text-align: center;
+		}
+		h1 {
+			margin: 0;
+			font-size: 3em;
+			color: #FFFFFF;
+			text-shadow: 2px 2px #333333;
+		}
+		main {
+			padding: 20px;
+			text-align: justify;
+			line-height: 1.5em;
+		}
+		footer {
+			background-color: #FFC0CB;
+			padding: 10px;
+			text-align: center;
+			font-size: 0.8em;
+			color: #FFFFFF;
+		}
+		nav {
+			background-color: #333333;
+			padding: 10px;
+		}
+		nav ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			justify-content: center;
+		}
+		nav li {
+			margin: 0 10px;
+		}
+		nav a {
+			color: #FFFFFF;
+			text-decoration: none;
+			font-weight: bold;
+			font-size: 1.2em;
+		}
+		.btn-container {
+			display: flex;
+			justify-content: center;
+			margin-top: 20px;
+		}
+		.btn {
+			margin: 0 10px;
+			padding: 10px 20px;
+			background-color: #FFC0CB;
+			color: #FFFFFF;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			font-size: 1.2em;
+		}
+		.btn-no {
+			position: absolute;
+			left: 0;
+			top: 0;
+			transform: translate(0, 0);
+			transition: transform 0.5s;
+		}
+		.message {
+			margin-top: 20px;
+			text-align: center;
+			font-size: 1.2em;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Minha princesa</h1>
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="paratealegrar.html">Para alegrar seu dia</a></li>
+				<li><a href="roleta.html">Roleta de Filmes</a></li>
+				<li><a href="album.html">Album de Fotos</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<p>Amor, sei que esta semana está sendo difícil e resolvi criar este texto para conversar com você de outra forma e mostrar que me importo. Após muito tempo pensando sobre o que eu deveria escrever e como abordar o tema, eu quero te dizer que, independentemente de qualquer briga que tivermos, desavença ou confusão, sempre estarei ao seu lado e sempre vou te amar. Quero que você saiba o quanto é importante para mim. Você é uma pessoa parceira e querida, e me alegra muito ter você ao meu lado e progredir com você. Quero que você saiba de tudo isso e que deixemos para trás nossas diferenças. Você aceita continuar ao meu lado?</p>
+		<div class="btn-container">
+			<button id="btn-yes" class="btn">Sim</button>
+			<button id="btn-no" class="btn btn-no">Não</button>
+		</div>
+		<p id="message" class="message"></p>
+	</main>
+<script>
+	const btnYes = document.getElementById("btn-yes");
+	const btnNo = document.getElementById("btn-no");
+	const message = document.getElementById("message");
+    btnYes.addEventListener("click", showMessage);
+    btnNo.addEventListener("mouseover", moveButton);
+    btnYes.addEventListener("mouseout", resetButtonPosition);
+
+    function showMessage() {
+        message.textContent = "Então me mande uma mensagem que tenho uma surpresa. Digite 'BLOBS'.";
+    }
+
+    function moveButton() {
+        const btnYesPosition = btnYes.getBoundingClientRect();
+        const randomX = Math.floor(Math.random() * (window.innerWidth - btnYesPosition.width));
+        const randomY = Math.floor(Math.random() * (window.innerHeight - btnYesPosition.height));
+        btnNo.style.transform = `translate(${randomX}px, ${randomY}px)`;
+    }
+
+    function resetButtonPosition() {
+        btnNo.style.transform = `translate(0, 0)`;
+    }
+</script>
+</body>
+</html>
